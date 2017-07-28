@@ -26,6 +26,7 @@ export default class Inputform extends Component {
       this.setState({ inputBox: inputBox });
     }
   }
+
   addInputBox(key, value = []) {
     let inputBox = this.state.inputBox;
     if (inputBox[key]) {
@@ -36,20 +37,21 @@ export default class Inputform extends Component {
     }
     this.setState({ inputBox: inputBox });
   }
+
   defaultSelect(index) {
     let inputBox = this.state.inputBox;
+    let id = 1;
+
     for (let key in inputBox) {
       if (index == key) {
-        let id = 1;
-        log(index);
-        return inputBox[key].map(item =>
-          <li key={id++}>
+        return inputBox[key].map(item => {
+          <li key={id++} className={item.id == "1"}>
             <p className="input-name">
-              {item}
+              {item.replace("#", "")}
             </p>
-            <input type="text" />
-          </li>
-        );
+            <input type={item.search("#") ? "textarea" : "text"} />
+          </li>;
+        });
       }
     }
   }

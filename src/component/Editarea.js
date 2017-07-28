@@ -17,6 +17,7 @@ export default class EditArea extends Component {
       leftList: []
     };
   }
+  localKey = 0;
 
   // console.log($(".left-list"));
   // _.$(".left-list").appendChild(li);
@@ -27,17 +28,17 @@ export default class EditArea extends Component {
       { title: "工作经历" },
       { title: "联系方式" }
     ];
-
     this.setState({ leftList: list });
   }
 
-  render() {
-    let id = 1;
-    let items = this.state.leftList.map(item => item.title);
+  selectList() {}
 
-    let list = items.map(item => {
+  render() {
+    let items = this.state.leftList.map(item => item.title);
+    let id = 1;
+    let list = items.map((item, index) => {
       return (
-        <li key={id++} className={item.id == 0 ? "active" : ""}>
+        <li key={id++} className={index == 0 ? "active" : ""}>
           {item}
         </li>
       );

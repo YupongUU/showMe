@@ -11,11 +11,21 @@
   display: flex;
   flex-flow: column;
   margin-right: 20px;
+  background-color: #3c3c3c;
+  cursor: default;
 }
 .left-list li {
-  height: 80px;
   width: 80px;
-  line-height: 80px;
-  border: 1px solid #eee;
+  line-height: 40px;
+  /* border: 1px solid #eee; */
+  border-bottom: 1px solid #eee;
+  color: #eee;
   text-align: center;
+  transition: line-height 0.5s;
+}
+.left-list li.active {
+  line-height: 80px;
+}
+.left-list li:hover {
+  line-height: 80px;
 }
