@@ -1,0 +1,21 @@
+#edit-area {
+  width: 400px;
+  border: 1px solid #eee;
+  min-height: 600px;
+  margin-right: 10px;
+  margin-left: 40px;
+  display: flex;
+  flex-flow: wrap;
+}
+.left-list {
+  display: flex;
+  flex-flow: column;
+  margin-right: 20px;
+}
+.left-list li {
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  border: 1px solid #eee;
+  text-align: center;
+}

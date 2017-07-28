@@ -1,0 +1,15 @@
+#input-form {
+  display: flex;
+  flex-flow: column;
+  padding: 20px 0;
+  flex: 1;
+}
+#input-form li {
+  align-content: flex-start;
+  margin-bottom: 20px;
+}
+#input-form input {
+  line-height: 40px;
+  padding: 0 20px;
+  width: 219px;
+}
